@@ -15,6 +15,7 @@ group :development do
   gem 'spring'
 end
 gem 'bootstrap-sass'
+gem 'devise'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'pg'
