@@ -7,9 +7,8 @@
 				= pluralize(@post.errors.count, "error")
 				prevented this post from saving
 			%ul
-				@post.errors.full_messages.each do |msg|
-				%li
-					msg
+				- @post.errors.full_messages.each do |msg|
+					%li= msg
 	%p
 		= f.label :title
 		%br
