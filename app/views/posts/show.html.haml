@@ -4,7 +4,7 @@
 %p.date
 	Submitted
 	= time_ago_in_words(@post.created_at)
-	- if user_signed_in? # Will need admin
+	- if user_signed_in?
 		Ago | 
 		= link_to 'Edit', edit_post_path(@post)
 		|
