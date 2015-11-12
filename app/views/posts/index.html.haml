@@ -10,7 +10,12 @@
 					%h2.title
 						= link_to post.title, post
 					%p.lead
-						= link_to post.name, post
-					%p.date
-						= post.created_at.strftime("%B, %d, %Y")
-
+						Ken Perrault 
+					%p
+						%span.glyphicon.glyphicon-time
+							= post.created_at.strftime("%B, %d, %Y")
+					%hr
+						%img.img-responsive{:alt => "", :src => "http://placehold.it/900x300"}
+						%hr
+							%p
+								= post.body
