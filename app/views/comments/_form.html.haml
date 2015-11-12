@@ -1,11 +1,66 @@
-= form_for([@post, @post.comments.build]) do |f|
-	%p
-		= f.label :name
-		%br
-		= f.text_field :name
-	%p 
-		= f.label :body
-		%br
-		= f.text_area :body
-	%p
-		= f.submit
+/ = form_for([@post, @post.comments.build]) do |f|
+/ 	.well
+/ 		.row
+/ 			.col-md-6
+/ 				%h4 Leave a Comment:
+/ 				%form{:fole => "form"}
+/ 					.form-group
+/ 						%p
+/ 							= f.label :name
+/ 							%br
+/ 							= f.text_field :name
+/ 						/ %textarea.form-control{:rows => "3"}
+/ 						%p 
+/ 							= f.label :body
+/ 							%br
+/ 							= f.text_area :body
+/ 						%button.btn.btn-primary{:type => "submint"} Submit
+/ 			%hr
+/ 	/ %p
+/ 	/ 	= f.label :name
+/ 	/ 	%br
+/ 	/ 	= f.text_field :name
+/ 	/ %p 
+/ 	/ 	= f.label :body
+/ 	/ 	%br
+/ 	/ 	= f.text_area :body
+/ 	/ %p
+/ 	/ 	= f.submit
+
+/ Comments Form
+.well
+  %h4 Leave a Comment:
+  %form{:role => "form"}
+    .form-group
+      %textarea.form-control{:rows => "3"}
+    %button.btn.btn-primary{:type => "submit"} Submit
+%hr
+
+/ Comment
+.media
+  %a.pull-left{:href => "#"}
+    %img.media-object{:alt => "", :src => "http://placehold.it/64x64"}
+  .media-body
+    %h4.media-heading
+      Start Bootstrap
+      %small August 25, 2014 at 9:30 PM
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+/ Comment
+.media
+  %a.pull-left{:href => "#"}
+    %img.media-object{:alt => "", :src => "http://placehold.it/64x64"}
+  .media-body
+    %h4.media-heading
+      Start Bootstrap
+      %small August 25, 2014 at 9:30 PM
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    / Nested Comment
+    .media
+      %a.pull-left{:href => "#"}
+        %img.media-object{:alt => "", :src => "http://placehold.it/64x64"}
+      .media-body
+        %h4.media-heading
+          Nested Start Bootstrap
+          %small August 25, 2014 at 9:30 PM
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    / End Nested Comment
