@@ -19,3 +19,46 @@
 						%hr
 							%p
 								= post.body
+								= link_to ('Read More <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, post, :class => "btn btn-primary"
+							%hr
+							- if post.last
+								%ul.pager
+									%li.previous
+										%a{:href => "#"} &larr; Older
+									%li.next
+										%a{:href => "#"} Newer &rarr;
+		.col-md-4
+			.well
+				%h4 Blog Search
+				.input-group
+					%input.form-control{:type => "text"}
+						%span.input-group-btn
+							%button.btn.btn-default{:type => "button"}
+								%span.glyphicon.glyphicon-search
+		.col-md-4
+			.well
+				%h4 Blog Categories
+				.row
+					.col-lg-6
+						%ul.list-unstyled
+							%li
+								%a{:href => "#"} Local Managment
+							%li
+								%a{:href => "#"} National Managment
+							%li
+								%a{:href => "#"} Global Managment
+							%li
+								%a{:href => "#"} Leadership
+					.col-lg-6
+						%ul.list-unstyled
+							%li
+								%a{:href => "#"} Fun Facts
+							%li
+								%a{:href => "#"} New Topics
+							%li
+								%a{:href => "#"} News Effects
+							%li
+								%a{:href => "#"} Classroom
+			.well
+				%h4 Side Widget Well
+				%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.
