@@ -1,6 +1,16 @@
-= @posts.each do |post|
-	.post_wrapper
-		%h2.title
-			= link_to post.title, post
-		%p.date
-			= post.created_at.strftime("%B, %d, %Y")
+/ Page Content
+.container
+	.row
+		.col-md-8
+			%h1.page-header
+				Learning About Leadership			
+				%small Add side-note
+			= @posts.each do |post|
+				.post_wrapper
+					%h2.title
+						= link_to post.title, post
+					%p.lead
+						= link_to post.name, post
+					%p.date
+						= post.created_at.strftime("%B, %d, %Y")
+
