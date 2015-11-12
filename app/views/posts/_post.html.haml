@@ -1,0 +1,15 @@
+= @posts.each do |post|
+	.post_wrapper
+		%h2.title
+			= link_to post.title, post
+		%p.lead
+			Ken Perrault 
+		%p
+			%span.glyphicon.glyphicon-time
+				= post.created_at.strftime("%B, %d, %Y")
+		%hr
+			%img.img-responsive{:alt => "", :src => "http://placehold.it/900x300"}
+			%hr
+				%p
+					= post.body
+					= link_to ('Read More <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, post, :class => "btn btn-primary"
