@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
 	before_action :authenticate_user!, only: [:create]
-	before_action :authenticate_admin!, only: [:destroy]
 
 	def create
 		@post = Post.find(params[:post_id])
